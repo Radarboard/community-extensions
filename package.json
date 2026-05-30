@@ -1,0 +1,14 @@
+{
+  "name": "@radarboard/community-extensions",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm generate:catalog",
+    "generate:catalog": "node scripts/generate-catalog.mjs",
+    "lint": "pnpm validate",
+    "test": "pnpm validate",
+    "typecheck": "node --check radarboard.community.config.js",
+    "validate": "node scripts/validate-all.mjs"
+  }
+}

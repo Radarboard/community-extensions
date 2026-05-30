@@ -18,3 +18,5 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm validate
+      - run: pnpm catalog:generate
+      - run: test -f catalog.json

@@ -1,0 +1,31 @@
+name: Extension request
+description: Suggest a new community integration, plugin, or widget.
+title: "Extension request: "
+labels:
+  - extension-request
+body:
+  - type: input
+    id: service
+    attributes:
+      label: Service or workflow
+      description: Which service, product area, or workflow should this extension support?
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Extension type
+      options:
+        - Integration
+        - Plugin
+        - Widget
+        - Combination
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: What should Radarboard users be able to track or do?
+    validations:
+      required: true

@@ -6,11 +6,33 @@
   "type": "module",
   "scripts": {
     "build": "pnpm generate:catalog",
-    "catalog:generate": "node scripts/generate-catalog.mjs",
-    "generate:catalog": "node scripts/generate-catalog.mjs",
-    "lint": "pnpm validate",
-    "test": "pnpm validate",
+    "catalog:generate": "node packages/extension-tools/bin/radarboard-extension.mjs catalog",
+    "check:commit": "commitlint --from=HEAD~1 --to=HEAD --verbose",
+    "check:extensions": "node packages/extension-tools/bin/radarboard-extension.mjs validate --extensions-only",
+    "create-integration": "node packages/extension-tools/bin/radarboard-extension.mjs create integration",
+    "create-plugin": "node packages/extension-tools/bin/radarboard-extension.mjs create plugin",
+    "create-widget": "node packages/extension-tools/bin/radarboard-extension.mjs create widget",
+    "format": "biome format --write .",
+    "generate:catalog": "node packages/extension-tools/bin/radarboard-extension.mjs catalog",
+    "lint": "biome check . && pnpm validate",
+    "lint:fix": "biome check --write . && pnpm validate",
+    "prepare": "lefthook install",
+    "scaffold:extension-repo": "node packages/extension-tools/bin/radarboard-extension.mjs create package",
+    "secrets": "node packages/extension-tools/bin/radarboard-extension.mjs validate --secrets-only",
+    "submit-check": "node packages/extension-tools/bin/radarboard-extension.mjs submit-check",
+    "test": "node --test scripts/__tests__/extension-validation.test.mjs packages/extension-tools/src/__tests__/*.test.mjs",
     "typecheck": "node --check radarboard.community.config.js",
-    "validate": "node scripts/validate-all.mjs"
+    "validate": "node packages/extension-tools/bin/radarboard-extension.mjs validate"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.16",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "lefthook": "^2.1.9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "lefthook"
+    ]
   }
 }

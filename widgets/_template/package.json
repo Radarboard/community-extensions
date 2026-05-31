@@ -1,0 +1,33 @@
+{
+  "name": "@radarboard/widget-__EXT_KEBAB__",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./data-resolver": "./src/data-resolver.tsx",
+    "./types": "./src/types.ts"
+  },
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@radarboard/hooks": "^1.0.0",
+    "@radarboard/types": "^1.0.0",
+    "@radarboard/ui": "^1.0.0",
+    "@radarboard/utils": "^1.0.0",
+    "@radarboard/widget-engine": "^1.0.0",
+    "@radarboard/widget-sdk": "^1.0.0",
+    "lucide-react": "^0.577.0",
+    "react": "^19.0.0",
+    "swr": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.3",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react-dom": "^19.0.0"
+  }
+}

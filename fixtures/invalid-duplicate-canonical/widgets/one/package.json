@@ -1,0 +1,11 @@
+{
+  "name": "@radarboard/widget-one",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@radarboard/widget-sdk": "^1.0.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@radarboard/integration-__EXT_KEBAB__",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/types.ts"
+  },
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@radarboard/integration-sdk": "^1.0.0",
+    "@radarboard/types": "^1.0.0",
+    "@radarboard/utils": "^1.0.0",
+    "lucide-react": "^0.577.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }
+}

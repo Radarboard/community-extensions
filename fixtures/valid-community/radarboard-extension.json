@@ -1,0 +1,29 @@
+{
+  "name": "Demo Extension Package",
+  "description": "Fixture package with one integration, plugin, and widget.",
+  "author": {
+    "name": "Radarboard",
+    "url": "https://github.com/Radarboard"
+  },
+  "minAppVersion": "1.0.0",
+  "extensions": [
+    {
+      "type": "integration",
+      "path": "integrations/demo",
+      "name": "@radarboard/integration-demo",
+      "required": true
+    },
+    {
+      "type": "plugin",
+      "path": "plugins/demo",
+      "name": "@radarboard/plugin-demo",
+      "required": true
+    },
+    {
+      "type": "widget",
+      "path": "widgets/demo",
+      "name": "@radarboard/widget-demo",
+      "required": true
+    }
+  ]
+}

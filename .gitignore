@@ -1,7 +1,7 @@
 node_modules/
-catalog.json
 .env
 .env.*
+!fixtures/secret-fixture/.env
 .DS_Store
 dist/
 coverage/

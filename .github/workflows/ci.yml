@@ -11,12 +11,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm commitlint --from "$COMMIT_FROM" --to "$COMMIT_TO" --verbose
+        env:
+          COMMIT_FROM: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          COMMIT_TO: ${{ github.sha }}
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm check:extensions
+      - run: pnpm secrets
+      - run: pnpm test
       - run: pnpm validate
       - run: pnpm catalog:generate
       - run: test -f catalog.json

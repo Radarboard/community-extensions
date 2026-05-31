@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "name": "Radarboard Community Extensions",
+  "repository": "https://github.com/Radarboard/community-extensions",
+  "docs": "https://docs.radarboard.app/developer-guide/community-extensions",
+  "extensionDirectories": {
+    "integration": "integrations",
+    "plugin": "plugins",
+    "widget": "widgets"
+  },
+  "extensions": []
+}

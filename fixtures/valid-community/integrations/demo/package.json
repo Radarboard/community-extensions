@@ -1,0 +1,13 @@
+{
+  "name": "@radarboard/integration-demo",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@radarboard/integration-sdk": "^1.0.0",
+    "@radarboard/types": "^1.0.0",
+    "@radarboard/utils": "^1.0.0"
+  }
+}

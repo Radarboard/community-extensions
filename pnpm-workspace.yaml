@@ -1,4 +1,8 @@
 packages:
+  - "packages/*"
   - "integrations/*"
+  - "!integrations/_template"
   - "plugins/*"
+  - "!plugins/_template"
   - "widgets/*"
+  - "!widgets/_template"

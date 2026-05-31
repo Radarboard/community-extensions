@@ -1,0 +1,15 @@
+{
+  "name": "@radarboard/widget-demo",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@radarboard/widget-sdk": "^1.0.0",
+    "@radarboard/widget-engine": "^1.0.0",
+    "@radarboard/types": "^1.0.0",
+    "@radarboard/ui": "^1.0.0",
+    "@radarboard/utils": "^1.0.0"
+  }
+}

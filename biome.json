@@ -1,0 +1,138 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.16/schema.json",
+  "files": {
+    "includes": [
+      ".github/**",
+      "docs/**",
+      "examples/**",
+      "fixtures/**",
+      "integrations/**",
+      "packages/**",
+      "plugins/**",
+      "scripts/**",
+      "skills/**",
+      "widgets/**",
+      "*.json",
+      "*.js",
+      "*.mjs",
+      "*.md",
+      "*.yml",
+      "*.yaml",
+      "!fixtures/secret-fixture/.env",
+      "!node_modules",
+      "!dist",
+      "!coverage",
+      "!.turbo"
+    ]
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on"
+        }
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "semicolons": "always",
+      "trailingCommas": "es5"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "noUndeclaredDependencies": "error",
+        "noUnusedFunctionParameters": "error"
+      },
+      "security": {
+        "noGlobalEval": "error"
+      },
+      "suspicious": {
+        "noDoubleEquals": "error",
+        "noEmptyBlockStatements": "error",
+        "noShadowRestrictedNames": "error"
+      },
+      "style": {
+        "useTemplate": "warn",
+        "useThrowOnlyError": "error"
+      },
+      "complexity": {
+        "noUselessFragments": "error",
+        "noUselessLoneBlockStatements": "error"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.test.mjs",
+        "**/*.spec.ts",
+        "**/*.spec.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredDependencies": "off",
+            "noUnusedFunctionParameters": "off"
+          },
+          "suspicious": {
+            "noEmptyBlockStatements": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["scripts/**", "packages/extension-tools/bin/**"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredDependencies": "off"
+          },
+          "suspicious": {
+            "noConsole": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["integrations/**", "plugins/**", "widgets/**", "fixtures/**"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredDependencies": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["integrations/_template/**", "plugins/_template/**", "widgets/_template/**"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "useHookAtTopLevel": "off"
+          }
+        }
+      }
+    }
+  ]
+}

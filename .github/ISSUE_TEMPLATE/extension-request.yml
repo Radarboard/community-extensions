@@ -29,3 +29,24 @@ body:
       description: What should Radarboard users be able to track or do?
     validations:
       required: true
+  - type: textarea
+    id: credentials
+    attributes:
+      label: Credentials and setup
+      description: What account, API key, OAuth app, webhook, or MCP setup would this need?
+    validations:
+      required: false
+  - type: textarea
+    id: surfaces
+    attributes:
+      label: Expected surfaces
+      description: Describe expected dashboard widgets, plugin overlays, MCP tools, notifications, or settings.
+    validations:
+      required: false
+  - type: textarea
+    id: quality
+    attributes:
+      label: Quality bar
+      description: Include references, screenshots, APIs, rate limits, or examples that would help reviewers validate the extension.
+    validations:
+      required: false

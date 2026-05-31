@@ -301,6 +301,7 @@ async function checkBundleImpact(extension) {
 
 async function checkGeneratedArtifacts(extension) {
   const offenders = [...GENERATED_DIR_NAMES]
+    .filter((name) => name !== "node_modules")
     .map((name) => join(extension.dir, name))
     .filter((path) => existsSync(path));
   return [

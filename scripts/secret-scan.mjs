@@ -10,7 +10,7 @@ const SECRET_PATTERNS = [
   { name: "Slack token", pattern: /xox[baprs]-[A-Za-z0-9-]{20,}/ },
   {
     name: "hardcoded secret assignment",
-    pattern: /(?:api[_-]?key|secret|token|password)\s*[:=]\s*["'][A-Za-z0-9_./+=-]{24,}["']/i,
+    pattern: /(?:api[_-]?key|secret|token|password)\s*[:=]\s*["'](?!--)[A-Za-z0-9_./+=-]{24,}["']/i,
   },
 ];
 

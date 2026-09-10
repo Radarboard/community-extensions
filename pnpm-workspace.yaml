@@ -17,5 +17,5 @@ catalog:
   react-dom: "^19.2.6"
   swr: "^2.4.1"
   typescript: "^5.9.3"
-  vitest: "^4.1.7"
+  vitest: "^4.1.11"
   zod: "^4.4.3"
